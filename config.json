@@ -1,0 +1,1074 @@
+{
+  "port": 8090,
+  "vmix": {
+    "host": "127.0.0.1",
+    "port": 8088
+  },
+  "cams": [
+    {
+      "id": "L",
+      "role": "Kamera links",
+      "input": "CAM2",
+      "replayCamera": 2
+    },
+    {
+      "id": "M",
+      "role": "Führung",
+      "input": "CAM1",
+      "replayCamera": 1
+    },
+    {
+      "id": "R",
+      "role": "Kamera rechts",
+      "input": "CAM3",
+      "replayCamera": 3
+    }
+  ],
+  "scoreboard": {
+    "input": "LUPL-SU_scoreboard_clock.gtzip",
+    "home": "TxtHomeScore.Text",
+    "away": "TxtAwayScore.Text",
+    "period": "TxtClockPeriod.Text",
+    "periodFormat": "{}. Drittel",
+    "clock": [
+      "TxtClockTimeM10.Text",
+      "TxtClockTimeM01.Text",
+      "TxtClockTimeT.Text",
+      "TxtClockTimeS10.Text",
+      "TxtClockTimeS01.Text"
+    ],
+    "homeName": "TxtHomeName.Text",
+    "awayName": "TxtAwayName.Text",
+    "overlay": 1,
+    "manual": {
+      "periodMinutes": 20,
+      "penaltyColor": "#CD1619FF",
+      "stopOnGoal": true
+    }
+  },
+  "replay": {
+    "seconds": 5,
+    "channel": "",
+    "periods": [
+      {
+        "label": "1. Drittel",
+        "short": "1",
+        "tab": 11
+      },
+      {
+        "label": "2. Drittel",
+        "short": "2",
+        "tab": 12
+      },
+      {
+        "label": "3. Drittel",
+        "short": "3",
+        "tab": 13
+      },
+      {
+        "label": "Verlängerung",
+        "short": "VL",
+        "tab": 14
+      }
+    ],
+    "highlightTab": 10,
+    "file": "D:\\vMixReplay\\1080p50\\Replay\\replay2.xml",
+    "autoHighlightTypes": [
+      "Tor"
+    ],
+    "hideScoreboard": true,
+    "highlightMusic": "129700d8-5e48-4421-8167-bf41c8977720",
+    "defaultType": "Szene",
+    "types": [
+      "Tor",
+      "Strafe",
+      "Parade",
+      "Chance"
+    ],
+    "marks": [
+      {
+        "id": "L",
+        "label": "◀ L + M",
+        "sub": "Tor links",
+        "cams": [
+          "L",
+          "M"
+        ]
+      },
+      {
+        "id": "M",
+        "label": "M",
+        "sub": "nur Mitte",
+        "cams": [
+          "M"
+        ]
+      },
+      {
+        "id": "R",
+        "label": "M + R ▶",
+        "sub": "Tor rechts",
+        "cams": [
+          "M",
+          "R"
+        ]
+      }
+    ],
+    "highlightClip": {
+      "intro": [],
+      "outro": []
+    },
+    "fps": 50
+  },
+  "audio": {
+    "sources": [
+      {
+        "id": "comm1",
+        "name": "Kommentar 1",
+        "short": "KOM 1",
+        "input": "Audio-COMM1",
+        "role": "commentary"
+      },
+      {
+        "id": "comm2",
+        "name": "Kommentar 2",
+        "short": "KOM 2",
+        "input": "Audio-COMM2",
+        "role": "commentary"
+      },
+      {
+        "id": "halle",
+        "name": "CAM1 · Hallenton (beim Test prüfen)",
+        "short": "HALLE",
+        "input": "CAM1",
+        "role": "atmo"
+      }
+    ],
+    "music": {
+      "name": "WASA Musik",
+      "input": "129700d8-5e48-4421-8167-bf41c8977720"
+    },
+    "breakVideo": "88d4cb51-c609-4f62-9a9a-2e7df9138a54",
+    "breakSound": "video",
+    "loudnessTarget": -16,
+    "loudnessTolerance": 3,
+    "loudnessOffset": 0,
+    "commentaryOverAtmo": 10
+  },
+  "sponsor": {
+    "inputs": [
+      "LUPL-SU_sponsor.gtzip"
+    ],
+    "overlay": 3,
+    "intervalSec": 178,
+    "durationSec": 8,
+    "list": [
+      {
+        "label": "Zubi Outlet",
+        "title": "Sponsor",
+        "picture": "C:\\_LocalData\\230909 Logos/Logos zubioutlet_zweizeilig orange-schwarz_200p.png"
+      },
+      {
+        "label": "MedBase",
+        "title": "Sponsor",
+        "picture": "C:\\_LocalData\\230909 Logos/medbase_200p.png"
+      },
+      {
+        "label": "Berit Klinik",
+        "title": "Sponsor",
+        "picture": "C:\\_LocalData\\230909 Logos/Berit_Klinik.png"
+      },
+      {
+        "label": "Orthopädie Rosenberg",
+        "title": "Sponsor",
+        "picture": "C:\\_LocalData\\230909 Logos/Orthopaedie-Rosenberg_200p.png"
+      },
+      {
+        "label": "Pfister Reisen",
+        "title": "Sponsor",
+        "picture": "C:\\_LocalData\\230909 Logos/Pfister-Reisen-200px.png"
+      }
+    ],
+    "order": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "logos": [
+    {
+      "name": "League ID + Livestream-Pro-Logo",
+      "input": "LUPL-SU_league_id.gtzip",
+      "overlay": 4
+    }
+  ],
+  "logosOffFor": [
+    "Liga-Trailer lang",
+    "Liga-Trailer HL.mp4"
+  ],
+  "schedules": [
+    {
+      "id": "vorspiel",
+      "title": "VOR SPIEL",
+      "anchorLabel": "SPIELBEGINN",
+      "anchorTime": "20:00",
+      "steps": [
+        {
+          "at": "-30:00",
+          "label": "Stream-Vorbereitung",
+          "sub": "Stream und Aufzeichnung separat starten; beim Probelauf ausgeschaltet lassen.",
+          "action": {
+            "label": "STREAM-VORBEREITUNG",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "panel": "audioPause"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "Function": "Pause",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "panel": "logosOn"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-15:00",
+          "label": "Opener / Beauty Shot",
+          "sub": "Hub-Veröffentlichung separat prüfen.",
+          "action": {
+            "label": "OPENER / BEAUTY SHOT",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "gfx": {
+                  "kind": "opener"
+                }
+              },
+              {
+                "panel": "logosOn"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-14:30",
+          "label": "WASA-Werbeslot 1",
+          "sub": "WASA-Videoliste im Liga-Hintergrund; nächste Aktion beendet den Slot.",
+          "action": {
+            "label": "WASA-WERBESLOT 1",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "panel": "audioPause"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "panel": "overlaysOff"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "Function": "SelectIndex",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54",
+                "Value": 1
+              },
+              {
+                "Function": "Restart",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "LoopOn",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "CutDirect",
+                "Input": "Pausenwerbung WASA"
+              },
+              {
+                "Function": "AudioOn",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Play",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "panel": "logosOn"
+              },
+              {
+                "panel": "breakSound"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-08:30",
+          "label": "Zurück zum Opener",
+          "sub": "",
+          "action": {
+            "label": "ZURÜCK ZUM OPENER",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "Function": "Pause",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "panel": "overlaysOn"
+              },
+              {
+                "gfx": {
+                  "kind": "opener"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "at": "-08:00",
+          "label": "Liga-Trailer und Kommentar",
+          "sub": "Trailer läuft vollständig; danach CAM1 und beide Kommentare.",
+          "action": {
+            "label": "LIGA-TRAILER UND KOMMENTAR",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "panel": "audioPause"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "Function": "Pause",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "gfx": "hide"
+              },
+              {
+                "Function": "LoopOff",
+                "Input": "Liga-Trailer lang"
+              },
+              {
+                "clip": "Liga-Trailer lang"
+              },
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "panel": "logosOn"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "panel": "audioGame"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-07:00",
+          "label": "Aufstellungen Gast und Heim",
+          "sub": "Zuerst die aktuelle Spiel-Konfiguration laden.",
+          "action": {
+            "label": "AUFSTELLUNGEN GAST UND HEIM",
+            "auto": false,
+            "required": false,
+            "calls": [
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "panel": "audioGame"
+              },
+              {
+                "gfx": {
+                  "kind": "lineup",
+                  "team": "away"
+                }
+              },
+              {
+                "wait": 30000
+              },
+              {
+                "gfx": "hide"
+              },
+              {
+                "wait": 3000
+              },
+              {
+                "gfx": {
+                  "kind": "lineup",
+                  "team": "home"
+                }
+              },
+              {
+                "wait": 30000
+              },
+              {
+                "gfx": "hide"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-05:00",
+          "label": "Einlauf, Schiedsrichter, Starting 6",
+          "sub": "Kameras und Einblender von Hand passend zum Hallenablauf wählen."
+        },
+        {
+          "at": "-00:22",
+          "label": "Mobiliar vor dem Bully",
+          "sub": "Von Hand auslösen; danach CAM1 mit Kommentar und Hallenton.",
+          "action": {
+            "label": "MOBILIAR VOR DEM BULLY",
+            "auto": false,
+            "required": true,
+            "calls": [
+              {
+                "panel": "audioPause"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "Function": "Pause",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "gfx": "hide"
+              },
+              {
+                "Function": "LoopOff",
+                "Input": "Mobiliar-Werbung"
+              },
+              {
+                "clip": "Mobiliar-Werbung"
+              },
+              {
+                "Function": "Pause",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+              },
+              {
+                "Function": "Pause",
+                "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+              },
+              {
+                "Function": "CutDirect",
+                "Input": "CAM1"
+              },
+              {
+                "panel": "overlaysOn"
+              },
+              {
+                "panel": "logosOn"
+              },
+              {
+                "Function": "AudioOff",
+                "Input": "Audio-WirelessMic"
+              },
+              {
+                "panel": "audioGame"
+              }
+            ]
+          }
+        },
+        {
+          "at": "-00:10",
+          "label": "Live-Bild kontrollieren",
+          "sub": "CAM1, Kommentar, Hallenton, Logos und Matchuhr prüfen."
+        },
+        {
+          "at": "00:00",
+          "label": "1. Drittel",
+          "sub": "Matchuhr im Modus VON HAND starten."
+        }
+      ]
+    },
+    {
+      "id": "pause",
+      "title": "PAUSE",
+      "anchorLabel": "WIEDERANPFIFF",
+      "start": {
+        "label": "PAUSE STARTEN",
+        "sub": "Resultat 15 s · Drittel-Replays · WASA-Werbung",
+        "note": "15 Minuten. Lidl mit ZURÜCK ZUM SPIEL von Hand auslösen.",
+        "minutes": 15,
+        "calls": [
+          {
+            "Function": "CutDirect",
+            "Input": "CAM1"
+          },
+          {
+            "gfx": {
+              "kind": "result"
+            }
+          },
+          {
+            "wait": 15000
+          },
+          {
+            "gfx": "hide"
+          },
+          {
+            "panel": "audioPause"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "Audio-WirelessMic"
+          },
+          {
+            "panel": "overlaysOff"
+          },
+          {
+            "panel": "periodClip"
+          },
+          {
+            "panel": "audioPause"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "Audio-WirelessMic"
+          },
+          {
+            "panel": "overlaysOff"
+          },
+          {
+            "Function": "Pause",
+            "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+          },
+          {
+            "Function": "SelectIndex",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54",
+            "Value": 1
+          },
+          {
+            "Function": "Restart",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "LoopOn",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "CutDirect",
+            "Input": "Pausenwerbung WASA"
+          },
+          {
+            "Function": "AudioOn",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "Play",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "panel": "logosOn"
+          },
+          {
+            "panel": "breakSound"
+          }
+        ]
+      },
+      "end": {
+        "label": "ZURÜCK ZUM SPIEL",
+        "sub": "WASA-Werbung aus · Lidl Men · CAM1 mit Ton",
+        "calls": [
+          {
+            "panel": "audioPause"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "Audio-WirelessMic"
+          },
+          {
+            "Function": "Pause",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "Pause",
+            "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+          },
+          {
+            "Function": "LoopOff",
+            "Input": "Presenter - Lidl Schweiz Partner Unihockey Men v2.mp4"
+          },
+          {
+            "clip": "Presenter - Lidl Schweiz Partner Unihockey Men v2.mp4"
+          },
+          {
+            "Function": "Pause",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+          },
+          {
+            "Function": "Pause",
+            "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+          },
+          {
+            "Function": "CutDirect",
+            "Input": "CAM1"
+          },
+          {
+            "panel": "overlaysOn"
+          },
+          {
+            "panel": "logosOn"
+          },
+          {
+            "Function": "AudioOff",
+            "Input": "Audio-WirelessMic"
+          },
+          {
+            "panel": "audioGame"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": "-15:00",
+          "label": "Pausenbeginn",
+          "sub": "Startknopf: Resultat, Drittel-Replays, danach WASA-Werbeliste."
+        },
+        {
+          "at": "-01:00",
+          "label": "Lidl vorbereiten",
+          "sub": "ZURÜCK ZUM SPIEL von Hand so auslösen, dass Lidl rechtzeitig vor dem Bully endet. Zeitpunkt mit Verantwortlichen klären."
+        },
+        {
+          "at": "00:00",
+          "label": "Wiederanpfiff",
+          "sub": "Live-Bild, Ton und Matchuhr von Hand kontrollieren."
+        }
+      ]
+    }
+  ],
+  "graphics": {
+    "barColor": "#CD1619FF",
+    "overlay": 2,
+    "logoPath": "C:\\_LocalData\\230909 Einblender\\TeamLogos",
+    "titles": {
+      "board": "LUPL-SU_board.gtzip",
+      "leagueInfo": "LUPL-SU_league_info.gtzip",
+      "teamInfo": "LUPL-SU_team_info.gtzip",
+      "playerEvent": "LUPL-SU_team_player_event.gtzip",
+      "playerName": "LUPL-SU_team_player_name.gtzip",
+      "lineupHome": "LUPL-SU_team_lineup_home.gtzip",
+      "lineupAway": "LUPL-SU_team_lineup_away.gtzip",
+      "startingSix": "LUPL-SU_team_startingsix.gtzip"
+    },
+    "opener": {
+      "top": "{date}",
+      "main": "{time}",
+      "bottom": "{location}"
+    },
+    "penalties": [
+      "2'",
+      "2'+2'",
+      "5'",
+      "10'"
+    ],
+    "shortcuts": [
+      "Entschuldigen Sie die technische Störung!\nWir arbeiten mit Hochdruck an der Lösung!"
+    ],
+    "shootout": {
+      "input": "LUPL-SU_scoreboard_penaltyshooting.gtzip",
+      "colors": {
+        "open": "#FFFFFF",
+        "goal": "#2EA043",
+        "miss": "#CD1619"
+      }
+    },
+    "autoHideSec": {
+      "goal": 8,
+      "penalty": 8,
+      "name": 8,
+      "bestPlayer": 8
+    }
+  },
+  "preGame": {
+    "streamLeadMinutes": 30,
+    "onStreamStart": [
+      {
+        "panel": "audioPause"
+      },
+      {
+        "Function": "AudioOff",
+        "Input": "Audio-WirelessMic"
+      },
+      {
+        "Function": "Pause",
+        "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+      },
+      {
+        "Function": "AudioOff",
+        "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+      },
+      {
+        "Function": "Pause",
+        "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+      },
+      {
+        "Function": "CutDirect",
+        "Input": "CAM1"
+      },
+      {
+        "panel": "logosOn"
+      }
+    ],
+    "recordGame": true,
+    "reminder": "WASA-Test: zuerst PROBELAUF ohne Stream. Spielbeginn setzen, aktuelle Spiel-Config laden, Matchuhr auf VON HAND. Alle Rundown-Aktionen werden zunächst von Hand ausgelöst.",
+    "checklist": [
+      {
+        "id": "net",
+        "title": "Internet stabil",
+        "sub": "Upload mind. 15 Mbit, Kabel statt WLAN"
+      },
+      {
+        "id": "cams",
+        "title": "Alle 3 Kamerasignale da",
+        "sub": "L, M, R stabil im vMix",
+        "auto": "cams"
+      },
+      {
+        "id": "fps",
+        "title": "Alles auf 50p",
+        "sub": "Kameras und Capture-Karten 50 fps, nicht 59.94/60"
+      },
+      {
+        "id": "wb",
+        "title": "Weissabgleich, Kameras waagrecht",
+        "sub": "alle Kameras sehen gleich aus"
+      },
+      {
+        "id": "audio",
+        "title": "Kommentar kommt an, beide Kanäle",
+        "sub": "Audio-COMM1 und Audio-COMM2 einzeln prüfen; Funkmikrofon nur gezielt in vMix einschalten."
+      },
+      {
+        "id": "level",
+        "title": "Testsprache auf −16 LUFS",
+        "sub": "CAM1-Hallenton und Musikpegel prüfen; echtes Loudness-Meter verwenden."
+      },
+      {
+        "id": "replay",
+        "title": "Replays gelöscht",
+        "sub": "Testregister 11–14 und Highlights 10 prüfen; alte Register 1–8 bleiben getrennt. Panel löscht keine vMix-Events."
+      },
+      {
+        "id": "clock",
+        "title": "Matchuhr getestet",
+        "sub": "L-UPL Men, im Panel VON HAND wählen; Uhr stoppt bei Tor."
+      },
+      {
+        "id": "gfx",
+        "title": "Einblender und Clips geladen",
+        "sub": "Liga-Trailer, Mobiliar, Lidl, Stinger, Werbeslots"
+      },
+      {
+        "id": "logos",
+        "title": "League ID und Livestream-Pro-Logo an",
+        "sub": "bleiben bis Stream-Ende eingeblendet",
+        "auto": "logos"
+      },
+      {
+        "id": "key",
+        "title": "Stream-Key aus dem Hub eingetragen",
+        "sub": "Test im Hub-Admin: Bild und Ton kommen an"
+      },
+      {
+        "id": "backup",
+        "title": "Backup-Handy bereit",
+        "sub": "Vereins-Backup und zuständige Person vor Ort klären."
+      },
+      {
+        "id": "interview",
+        "title": "2 Interviews geplant",
+        "sub": "im SR-Meeting angekündigt"
+      },
+      {
+        "id": "rec",
+        "title": "Lokales Recording eingestellt",
+        "sub": "Aufnahmeformat und Speicherplatz in vMix prüfen; Panel ändert keine Encoder-Einstellungen.",
+        "onlyIf": "recordGame"
+      }
+    ]
+  },
+  "controlling": [
+    {
+      "label": "Stream 15 Min vor Spielbeginn live",
+      "check": "streamLead",
+      "minutes": 15
+    },
+    {
+      "label": "Ganzes Spiel ohne Unterbruch",
+      "check": "noInterruption"
+    },
+    {
+      "label": "Liga-Trailer vor dem Spiel",
+      "check": "onAir",
+      "input": "Liga-Trailer lang"
+    },
+    {
+      "label": "Mobiliar-Clip vor 1. Bully",
+      "check": "onAir",
+      "input": "Mobiliar-Werbung"
+    },
+    {
+      "label": "Lidl-Clip vor 2. Drittel",
+      "check": "onAir",
+      "input": "Presenter - Lidl Schweiz Partner Unihockey Men v2.mp4",
+      "schedule": "pause",
+      "round": 1
+    },
+    {
+      "label": "Lidl-Clip vor 3. Drittel",
+      "check": "onAir",
+      "input": "Presenter - Lidl Schweiz Partner Unihockey Men v2.mp4",
+      "schedule": "pause",
+      "round": 2
+    },
+    {
+      "label": "League ID + Livestream-Pro-Logo",
+      "check": "logos"
+    },
+    {
+      "label": "Lautheit −16 LUFS, keine Tonlöcher",
+      "check": "audio"
+    },
+    {
+      "label": "Kein Einspieler ohne Bild",
+      "check": "stalls"
+    },
+    {
+      "label": "Highlight-Video mit Mobiliar und Lidl",
+      "check": "videoExported",
+      "post": true
+    },
+    {
+      "label": "Highlights hochgeladen ≤ 4 h",
+      "check": "ticks",
+      "ids": [
+        "video:uploaded"
+      ],
+      "post": true
+    },
+    {
+      "label": "2 Interviews im Game-Feed",
+      "check": "ticks",
+      "ids": [
+        "iv:pause",
+        "iv:end"
+      ],
+      "post": true
+    }
+  ],
+  "postGame": {
+    "steps": [
+      {
+        "id": "result",
+        "title": "Resultat einblenden",
+        "info": "Emotionen, Halle"
+      },
+      {
+        "id": "bpAway",
+        "title": "Best Player Gast, Werbeslot 7"
+      },
+      {
+        "id": "bpHome",
+        "title": "Best Player Heim"
+      },
+      {
+        "id": "comment",
+        "title": "Kommentar Ende"
+      },
+      {
+        "id": "clip",
+        "title": "Highlight-Clip max. 1 Min, mit Stinger",
+        "info": "aus ★-Szenen"
+      },
+      {
+        "id": "stop",
+        "title": "Outro, Stopp"
+      }
+    ],
+    "finish": {
+      "label": "ABSCHLUSS NACH BEST PLAYER",
+      "sub": "Erst Ehrungen und Kommentar beenden, dann: Highlights · kurzer Liga-Trailer · 15 s CAM1 · Stream-Stopp",
+      "calls": [
+        {
+          "panel": "audioPause"
+        },
+        {
+          "Function": "AudioOff",
+          "Input": "Audio-WirelessMic"
+        },
+        {
+          "Function": "Pause",
+          "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+        },
+        {
+          "Function": "AudioOff",
+          "Input": "88d4cb51-c609-4f62-9a9a-2e7df9138a54"
+        },
+        {
+          "Function": "Pause",
+          "Input": "129700d8-5e48-4421-8167-bf41c8977720"
+        },
+        {
+          "gfx": "hide"
+        },
+        {
+          "panel": "overlaysOff"
+        },
+        {
+          "panel": "highlightClip"
+        },
+        {
+          "Function": "LoopOff",
+          "Input": "Liga-Trailer HL.mp4"
+        },
+        {
+          "clip": "Liga-Trailer HL.mp4"
+        },
+        {
+          "Function": "CutDirect",
+          "Input": "CAM1"
+        },
+        {
+          "panel": "logosOn"
+        },
+        {
+          "wait": 15000
+        },
+        {
+          "panel": "stopAll"
+        }
+      ]
+    },
+    "interviews": [
+      {
+        "id": "pause",
+        "title": "Interview Pause",
+        "sub": "Clip im Hub in den Game-Feed laden"
+      },
+      {
+        "id": "end",
+        "title": "Interview nach dem Spiel",
+        "sub": "spätestens 10 Min nach Handshake"
+      }
+    ],
+    "highlightVideo": {
+      "targetMinutes": [
+        3,
+        5
+      ],
+      "speeds": [
+        75,
+        100
+      ],
+      "template": [
+        {
+          "title": "Liga-Intro kurz",
+          "input": "Liga-Trailer HL.mp4"
+        },
+        {
+          "title": "Mobiliar",
+          "input": "Mobiliar-Werbung",
+          "required": true
+        },
+        {
+          "highlights": true
+        },
+        {
+          "title": "Lidl Men",
+          "input": "Presenter - Lidl Schweiz Partner Unihockey Men v2.mp4",
+          "required": true
+        }
+      ]
+    }
+  }
+}

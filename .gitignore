@@ -1,0 +1,17 @@
+/data/
+/backup-*/
+/tmp/
+*.log
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+*.vmix
+*.mp4
+*.avi
+*.mp3
+*.pdf
+Thumbs.db
+Desktop.ini
