@@ -11,5 +11,5 @@ if not exist dist\server.cjs (
   pause
   exit /b 1
 )
-node dist\server.cjs
+node tools\start-panel.cjs
 pause

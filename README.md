@@ -8,6 +8,8 @@ Dieses Repository enthält die angepasste, startfertige Distribution in `dist/`,
 
 Node.js LTS installieren, WASA-Preset in vMix öffnen, Web Controller auf Port 8088 aktivieren, `start.bat` starten. Panel: http://localhost:8090 (Port muss frei sein). Kein Installations- oder Build-Schritt nötig. Aktuelle Spiel-Konfiguration im Panel laden und Uhr auf VON HAND stellen.
 
+`start.bat` erkennt ein bereits laufendes Panel und zeigt dessen Adresse, statt einen zweiten Server zu starten. Belegt ein anderes Programm den Port, erscheint eine verständliche Meldung; es werden keine fremden Prozesse beendet.
+
 Die Config verwendet die vorhandenen Medienpfade des Regie-Laptops. Kameras: Mitte CAM1, links CAM2, rechts CAM3. Replay-Register 11–14 und Highlights 10; 15-Minuten-Pause; beide Kommentatoren und WASA-Werbeliste. Topscorer-Auswahl korrigiert, Grafikbalken und Strafanzeigen rot. Strafzeit-Korrekturen sind von Spielzeit-Korrekturen getrennt und auf die ursprüngliche Dauer begrenzt. Eine g+m-Hallenuhr ist noch nicht angebunden.
 
 Details: [WASA-TEST.md](WASA-TEST.md).
@@ -19,6 +21,7 @@ node --check dist/server.cjs
 node tools/check-topscorer.cjs
 node tools/check-penalties.cjs
 node tools/check-sponsor-pause.cjs
+node tools/check-startup.cjs
 ```
 
 `node tools/check-wasa.cjs` prüft zusätzlich das lokale WASA-Preset und die Medienpfade mit simuliertem vMix; dieser Test benötigt die vorhandenen Dateien auf dem Regie-Laptop.

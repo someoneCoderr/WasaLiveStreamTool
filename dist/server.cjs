@@ -26930,7 +26930,7 @@ app.post("/api/:name{.+}", async (c) => {
   }
 });
 app.use("*", serveStatic({ root: "./dist/public" }));
-serve({ fetch: app.fetch, port, hostname: "0.0.0.0" }, async () => {
+var panelServer = serve({ fetch: app.fetch, port, hostname: "0.0.0.0" }, async () => {
   await panel.poll();
   const vm = panel.vmixState;
   console.log(`
@@ -26952,4 +26952,10 @@ ${w.map((x) => `  ! ${x}`).join("\n")}`);
     console.log("");
   }
   panel.start(500);
+});
+panelServer.on("error", (error) => {
+  console.error(error.code === "EADDRINUSE"
+    ? `Port ${port} ist bereits belegt. Bitte start.bat verwenden; ein bereits laufendes Panel wird dort erkannt.`
+    : `Panel-Server konnte nicht gestartet werden: ${error.message}`);
+  process.exit(1);
 });
