@@ -25182,6 +25182,7 @@ var Sponsors = class {
   ref;
   imported;
   enabled = false;
+  blocked = false;
   nextAt = 0;
   activeUntil = 0;
   // when the sponsor on screen is taken off again; 0 = stays until taken off
@@ -25220,6 +25221,7 @@ var Sponsors = class {
    * with a number it is that sponsor, and it stays until it is taken off.
    */
   async show(nr) {
+    if (nr === void 0 && this.blocked) return;
     if (!this.cfg.inputs.length) throw new PanelError("Kein Sponsor-Input konfiguriert");
     const now = Date.now();
     let input2 = this.cfg.inputs[0];
@@ -25234,6 +25236,8 @@ var Sponsors = class {
     } else {
       input2 = this.cfg.inputs[this.rotation % this.cfg.inputs.length];
     }
+    // A pause may have started while vMix was loading the sponsor image.
+    if (nr === void 0 && this.blocked) return;
     if (nr === void 0) {
       this.rotation++;
       this.nextAt = now + this.intervalSec * 1e3;
@@ -25259,6 +25263,14 @@ var Sponsors = class {
    * input on the sponsor channel.
    */
   tick(now, busy, onScreen) {
+    this.blocked = busy;
+    if (busy) {
+      // Suspend the interval as well: never catch up an overdue sponsor as soon
+      // as the game resumes. Start a full interval after the break.
+      this.nextAt = this.enabled ? now + this.intervalSec * 1e3 : 0;
+      if (this.live !== null || onScreen) this.hide().catch(() => {});
+      return;
+    }
     if (this.live !== null && now - this.shownAt > SYNC_AFTER_MS && !onScreen) {
       this.live = null;
       this.activeUntil = 0;
@@ -25634,7 +25646,7 @@ var Panel = class {
       const sp = this.cfg.sponsor;
       if (this.sponsors && sp) {
         const onChannel = this.vm.overlays[sp.overlay];
-        this.sponsors.tick(now, !!this.playing || this.holdOverlays, sp.inputs.some((i) => this.findInput(i)?.number === onChannel));
+        this.sponsors.tick(now, this.sponsorBlocked(), sp.inputs.some((i) => this.findInput(i)?.number === onChannel));
       }
       this.trailerLogos().catch(() => {
       });
@@ -25848,6 +25860,13 @@ var Panel = class {
   }
   scheduleRunning() {
     return Object.values(this.schedule.running ?? {}).some(Boolean);
+  }
+  sponsorBlocked() {
+    if (this.playing || this.holdOverlays || this.sequences > 0) return true;
+    if (this.cfg.schedules.some((s) => s.start && this.schedule.running?.[s.id])) return true;
+    const active = this.activeInput();
+    const video = this.findInput(this.cfg.audio?.breakVideo);
+    return !!(active && video && (active.key === video.key || active.layers.includes(video.key)));
   }
   breakTab() {
     return this.book.tabOf(this.breakClipPeriod());

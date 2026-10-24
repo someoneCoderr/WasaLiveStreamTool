@@ -18,10 +18,15 @@ Prüfungen ohne vMix-Verbindung:
 node --check dist/server.cjs
 node tools/check-topscorer.cjs
 node tools/check-penalties.cjs
+node tools/check-sponsor-pause.cjs
 ```
 
 `node tools/check-wasa.cjs` prüft zusätzlich das lokale WASA-Preset und die Medienpfade mit simuliertem vMix; dieser Test benötigt die vorhandenen Dateien auf dem Regie-Laptop.
 Der lokale Strafzeit-Editor liegt lesbar in `local-fixes/penalty-editor.js`; `tools/apply-penalty-editor.py` setzt ihn in das Frontend ein. `tools/configure-wasa.py` ist ein einmaliges Einrichtungsskript und überschreibt die Config mit den dort definierten Werten; im Normalbetrieb direkt `config.json` bearbeiten.
+
+Die Sponsor-Automatik setzt während einer gestarteten Pause, auf dem WASA-Pausenbild und während Replay-/Rückkehrsequenzen aus. Nachher beginnt ein volles Sponsor-Intervall, ohne sofort eine verpasste Einblendung nachzuholen. Der Automatik-Schalter bleibt eingeschaltet.
+
+Replay Mitte wird mit CAM1 / Replay-Kamera 1 bedient und wurde über die Panel-Vorschau mit einer vorhandenen Aufnahme geprüft. Schwarze Bilder können auch durch Aufnahmelücken einzelner Kameras entstehen; korrekte Kameraauswahl allein garantiert keine vorhandenen Bilder. Einen Probereplay je Kamera vor Spielbeginn kontrollieren.
 
 Laufzeitdaten (`data/`), Sicherungen (`backup-*/`), Spielkonfigurationen, Medien und Aufnahmen sind vom Git-Upload ausgeschlossen. Das Panel legt seinen Zustand selbst an. Vorhandene Sicherungen bleiben lokal erhalten. Stream-Schlüssel werden nur in vMix gepflegt.
 

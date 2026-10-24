@@ -22,6 +22,7 @@ Das ursprüngliche vMix-Preset, TC-Dateien, Medien und bestehende Replay-Dateien
 - Sponsoren: fünf WASA-Logos, 8 s Anzeige und 170 s Pause (178 s von Start zu Start). Import der alten TC-Systemdatei würde diese Liste und Zeiten überschreiben (dort 10 s + 180 s). Für diesen Test ist kein Systemdatei-Import nötig.
 - PROBELAUF vor dem Spiel und in der Pause ausführen. Er schaltet wirklich das vMix-Programmbild, startet aber keinen Stream. Trailer/Mobiliar/Lidl vollständig und mit Ton kontrollieren. Bei diesen Video-Inputs ist im gespeicherten Preset Audio-Follow aktiv; das muss auch im geladenen Projekt stimmen.
 - Pausenbild: `Pausenwerbung WASA` enthält den Liga-Hintergrund und die vorhandene Videoliste mit Medbase, Berit, Rosenberg, Zubi und Migros. Prüfen, dass mehrere Clips nacheinander laufen, der Ton ankommt und die Logos sichtbar bleiben.
+- Sponsor-Automatik: eingeschaltet lassen, Pause starten und prüfen, dass keine Sponsor-Einblendung kommt (auch beim Resultat auf Kamerabild). Sie bleibt auch auf der Werbeliste und während der Rückkehr ausgesetzt. Danach läuft das volle Intervall bis zum nächsten Sponsor; keine sofortige Nachholung.
 - Pause: 15 Minuten. Start zeigt das Resultat 15 s, spielt vorhandene Panel-Drittelszenen und startet die Werbeliste. ZURÜCK ZUM SPIEL stoppt die Liste, spielt Lidl Men und schaltet auf CAM1 mit Ton zurück.
 - Alle Rundown-Aktionen sind zunächst manuell (kein `auto: true`). PROBELAUF führt sie trotzdem der Reihe nach aus. Für einen späteren Spielbetrieb Automatik und exakte Werbezeiten gemeinsam festlegen.
 
@@ -36,6 +37,7 @@ Neue Strafen behalten ihre ursprüngliche Höchstdauer, auch nach einem Panel-Ne
 Die Strafzeit-Kästchen in vMix und die 2-Minuten-Knöpfe im Panel sind rot. Nach dieser Änderung das Panel neu starten und die Browserseite neu laden. Die Tests unter `node tools/check-penalties.cjs` prüfen Korrekturen, Grenzen und die Eingabefelder ohne Verbindung zu vMix.
 
 Für Replay-Markierungen die Replay-Aufnahme in vMix separat starten. Das braucht keinen Stream.
+Vor Spielbeginn je eine frische Szene mit M, L und R in der Panel-Vorschau prüfen. M entspricht CAM1 / Replay-Kamera 1. Eine fehlende Aufnahme einer einzelnen Kamera wird durch die korrekte Auswahl nicht ersetzt: Bei schwarzen älteren Szenen die Aufnahmeabdeckung der Kamera im betroffenen Zeitraum prüfen. Ein späterer funktionsfähiger Replay beweist keine lückenlose frühere Aufnahme.
 Testablage: Drittel 1/2/3 und Verlängerung in **11/12/13/14**, Highlights in **10**.
 Die bisherigen Register 1–8 werden nicht gelöscht oder umsortiert. Vor dem Test prüfen, dass die Testregister leer sind. Neue Testereignisse nur durch das Panel anlegen und bearbeiten.
 Der Import aus vMix liest `D:\vMixReplay\1080p50\Replay\replay2.xml`; er übernimmt die konfigurierten Register, nicht automatisch die bisherige Torablage 8.
